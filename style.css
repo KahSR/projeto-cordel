@@ -4,32 +4,35 @@
      box-sizing: border-box;
 }
 :root{
-     --fz-large: clamp(3rem, 2.7143rem + 1.4286vw, 4rem);
-     --fz-base: 1.6rem;
-     --fz-small: 1.65rem;
+     --ft-secondry: "Passion One", sans-serif;
+     --ft-main: "Sriracha", cursive;
 
-     --fw-normal: 400;
-     --fw-bold: 600;
+     --fz-large: clamp(3rem, 2.1429rem + 4.2857vw, 6rem);
+     --fz-base: 1.6rem;
+     --fz-small: 1.7rem;
 
      --tx-line-height: 3.4rem;
 
      --g-padding-sides: 12px;
 
      --min-wh-container: 300px;
-     --max-wh-container: 480px;
+     --max-wh-container: 600px;
 }
 html{
      font-size: 62.5%;
 }
 body{
+     font-family: var(--ft-main);
      font-size: var(--fz-base);
      min-height: 100vh;
      background-color: #f5f5f5;
 }
 h1{
+     font-family: var(--ft-secondry);
      font-size: var(--fz-large);
      font-variant: small-caps;
-     letter-spacing: 1px;
+     font-weight: bolder;
+     letter-spacing: 2px;
      color: #fff;
 }
 p{
@@ -40,12 +43,11 @@ p, a{
 }
 a{
      color: #fff;
-     text-decoration: none;
      display: inline-block;
      padding: 4px;
 }
 .hover_link{
-     transition: transform .2s;
+     transition: .2s;
 }
 .hover_link:hover{
      transform: scale(1.1);
@@ -68,12 +70,16 @@ a{
 .container--bg{
      background-size: cover;
      background-attachment: fixed;
+     background-position: right center;
      color: #fff;
      padding: 15vh 0px;
+     overflow: hidden;
+     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 .container--bg-shadow{
      background-color: rgba(0, 0, 0, .50);
      border-radius: 0px 8px 8px 0px;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
      min-width: var(--min-wh-container);
      max-width: 58%;
      padding: 18px 12px;
@@ -83,4 +89,11 @@ a{
 }
 .container--bg:nth-child(4){
      background-image: url('imagens/background002.jpg');
+
+}
+.footer{
+     background: #212121;
+     color: #fff;
+     text-align: center;
+     padding: 20px var(--g-padding-sides);
 }
